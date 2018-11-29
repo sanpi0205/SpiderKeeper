@@ -6,6 +6,12 @@
 you can start the server by uwsgi
 like gunicorn -w 4 SpiderKeeper.uwsgi:app
 '''
+
 from SpiderKeeper.app import app, initialize
 
-initialize()
+
+if __name__ == '__main__':
+    initialize()
+    app.run()
+
+
